@@ -6,12 +6,14 @@
 #include <iterator>
 #include "YourSet.h"
 #include "heap.h"
+#include <vector>
 
 using std::string;
 using std::allocator;
 using std::pair;
 using std::uninitialized_copy;
 using std::make_move_iterator;
+using std::vector;
 
 YourSet::YourSet():
     first_ele(nullptr), first_free(nullptr), cap(nullptr) {}
@@ -23,6 +25,16 @@ YourSet::YourSet(const string &s, size_t n):
         check_realloc();
         alloc.construct(first_free++, s);
         n--;
+    }
+}
+
+YourSet::YourSet(vector<string> vs):
+    first_ele(nullptr), first_free(nullptr), cap(nullptr)
+{
+    if (!vs.empty()) {
+        for (auto cur = vs.begin(); cur != vs.end(); cur++) {
+            add(*cur);
+        }
     }
 }
 
@@ -106,4 +118,6 @@ void YourSet::free() {
 void YourSet::add(const string &s) {
     check_realloc();
     alloc.construct(first_free++, s);
+    heap_sort(first_ele, first_free);
 }
+

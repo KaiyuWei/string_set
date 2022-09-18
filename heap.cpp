@@ -44,7 +44,9 @@ void build_heap(string *begin, string *end) {
 }
 
 void heap_sort(string *begin, string *end) {
+    if (!begin || !end || begin == end) return;
     auto boundary = end;
+    build_heap(begin, boundary);
     for (auto cur = end - 1; cur != begin; cur-- ) {
         string temp = *cur;
         *cur = *begin;

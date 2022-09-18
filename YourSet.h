@@ -4,17 +4,20 @@
 #include <string>
 #include <memory>
 #include <utility>
+#include <vector>
 
 #ifndef UNTITLED8_YOURSET_H
 #define UNTITLED8_YOURSET_H
 using std::string;
 using std::allocator;
 using std::pair;
+using std::vector;
 
 class YourSet{
 public:
     YourSet();
     YourSet(const string&, size_t n = 1);
+    YourSet(vector<string>);
     YourSet(YourSet&);  // copy constructor
     YourSet(YourSet&&) noexcept; // moving constructor
     ~YourSet();  // destructor
