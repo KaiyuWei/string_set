@@ -127,3 +127,9 @@ bool YourSet::contains(const string &s) {
     bool res = binary_search(first_ele, first_free-1, s);
     return res;
 }
+
+bool YourSet::remove(const string &s) {
+    if (!contains(s)) return false;
+
+
+}
