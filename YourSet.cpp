@@ -5,6 +5,7 @@
 #include <utility>
 #include <iterator>
 #include "YourSet.h"
+#include "heap.h"
 
 using std::string;
 using std::allocator;

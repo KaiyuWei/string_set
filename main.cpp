@@ -19,6 +19,7 @@ int main(){
     set.add("ttttttt");
     set.add("tttttt");
     set.add("tttt");
+    set.add("zzz");
     set.add("ttttt");
     set.add("0");
     set.add("ttt");
@@ -30,7 +31,6 @@ int main(){
     for (auto beg = set.begin(); beg != set.end(); beg++) {
         cout << *beg << " ";
     }
-
 }
 
 
