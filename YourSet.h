@@ -16,7 +16,9 @@ public:
     YourSet();
     YourSet(const string&, size_t n = 1);
     YourSet(YourSet&);  // copy constructor
-    YourSet(YourSet&&); // moving constructor
+    YourSet(YourSet&&) noexcept; // moving constructor
+    ~YourSet();  // destructor
+    YourSet &operator=(const YourSet&);
     size_t size();
     size_t capacity();
     string *begin() {return first_ele;}
