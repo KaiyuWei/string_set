@@ -200,6 +200,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled8.dir\build.make CMakeFiles/untitled8.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+search.obj: search.cpp.obj
+.PHONY : search.obj
+
+# target to build an object file
+search.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled8.dir\build.make CMakeFiles/untitled8.dir/search.cpp.obj
+.PHONY : search.cpp.obj
+
+search.i: search.cpp.i
+.PHONY : search.i
+
+# target to preprocess a source file
+search.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled8.dir\build.make CMakeFiles/untitled8.dir/search.cpp.i
+.PHONY : search.cpp.i
+
+search.s: search.cpp.s
+.PHONY : search.s
+
+# target to generate assembly for a file
+search.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled8.dir\build.make CMakeFiles/untitled8.dir/search.cpp.s
+.PHONY : search.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,6 +242,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... search.obj
+	@echo ... search.i
+	@echo ... search.s
 .PHONY : help
 
 

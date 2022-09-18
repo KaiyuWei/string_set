@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled8.dir/heap.cpp.obj.d"
   "CMakeFiles/untitled8.dir/main.cpp.obj"
   "CMakeFiles/untitled8.dir/main.cpp.obj.d"
+  "CMakeFiles/untitled8.dir/search.cpp.obj"
+  "CMakeFiles/untitled8.dir/search.cpp.obj.d"
   "libuntitled8.dll.a"
   "untitled8.exe"
   "untitled8.exe.manifest"
