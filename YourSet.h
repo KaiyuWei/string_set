@@ -28,6 +28,7 @@ public:
     string *begin() {return first_ele;}
     string *end() {return first_free;}
     void add(const string&);
+    bool contains(const string&);
 private:
     allocator<string> alloc;
     pair<string*, string*> allocate_n_copy(string*, string*);

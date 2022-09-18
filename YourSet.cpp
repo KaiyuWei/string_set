@@ -7,6 +7,7 @@
 #include "YourSet.h"
 #include "heap.h"
 #include <vector>
+#include "search.h"
 
 using std::string;
 using std::allocator;
@@ -121,3 +122,7 @@ void YourSet::add(const string &s) {
     heap_sort(first_ele, first_free);
 }
 
+bool YourSet::contains(const string &s) {
+    bool res = binary_search(first_ele, first_free-1, s);
+    return res;
+}

@@ -156,7 +156,8 @@ CMakeFiles/untitled8.dir/YourSet.cpp.obj: ../YourSet.cpp \
   C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h \
   C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/stl_bvector.h \
   C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/vector.tcc \
-  ../heap.h
+  ../heap.h \
+  ../search.h
 
 CMakeFiles/untitled8.dir/heap.cpp.obj: ../heap.cpp \
   C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/string \
@@ -854,6 +855,8 @@ C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib
 
 C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:
 
+../search.h:
+
 ../heap.cpp:
 
 C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/bits/codecvt.h:
@@ -865,7 +868,5 @@ C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib
 C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/fstream:
 
 C:/Program\ Files\ (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32/bits/basic_file.h:
-
-../search.h:
 
 ../search.cpp:
