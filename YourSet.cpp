@@ -137,5 +137,4 @@ bool YourSet::remove(const string &s) {
     }
     alloc.destroy(--first_free);
     return true;
-
 }
