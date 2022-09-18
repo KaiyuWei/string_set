@@ -14,7 +14,6 @@ int main(){
     YourSet set("tim", 5);
     YourSet set2;
     set2 = std::move(set);
-
     cout << set2.capacity();
 }
 
