@@ -44,9 +44,13 @@ void min_heapify(string *begin, string *cur, string *end) {
 
 int main(){
     vector<string> vs{"c", "b", "a", "d", "e", "f", "g"};
-    min_heapify(vs.begin(), vs.begin(), vs.end());
-    for (auto s : vs)
-        cout << s << " ";
+    YourSet set;
+    set.add("c");
+    set.add("b");
+    set.add("a");
+
+//    min_heapify(vs.begin(), vs.begin(), vs.end());
+
 }
 
 

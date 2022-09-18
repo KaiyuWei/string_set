@@ -101,3 +101,8 @@ void YourSet::free() {
         alloc.deallocate(first_ele, capacity());
     }
 }
+
+void YourSet::add(const string &s) {
+    check_realloc();
+    alloc.construct(first_free++, s);
+}
