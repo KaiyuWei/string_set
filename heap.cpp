@@ -1,16 +1,11 @@
-#include <iostream>
-#include <sstream>
-#include <fstream>
-#include <memory>
-#include "YourSet.h"
+//
+// Created by kaiyu.wei on 9/18/2022.
+//
 #include <string>
-#include <utility>
-#include <vector>
+#include <memory>
 
 using std::string;
-using std::cout;
-using std::endl;
-using std::vector;
+using std::make_shared;
 
 void min_heapify(string *begin, string *cur, string *end) {
     auto n = end - begin;  // size of the set
@@ -41,12 +36,4 @@ void min_heapify(string *begin, string *cur, string *end) {
         min_heapify(begin, minimum, end);
     }
 }
-
-int main(){
-    vector<string> vs{"c", "b", "a", "d", "e", "f", "g"};
-    min_heapify(vs.begin(), vs.begin(), vs.end());
-    for (auto s : vs)
-        cout << s << " ";
-}
-
 

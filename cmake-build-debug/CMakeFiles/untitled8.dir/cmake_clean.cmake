@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled8.dir/YourSet.cpp.obj"
   "CMakeFiles/untitled8.dir/YourSet.cpp.obj.d"
+  "CMakeFiles/untitled8.dir/heap.cpp.obj"
+  "CMakeFiles/untitled8.dir/heap.cpp.obj.d"
   "CMakeFiles/untitled8.dir/main.cpp.obj"
   "CMakeFiles/untitled8.dir/main.cpp.obj.d"
   "libuntitled8.dll.a"
