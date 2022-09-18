@@ -115,7 +115,7 @@ void YourSet::free() {
 }
 
 void YourSet::add(const string &s) {
-    bool exist = binary_search(first_ele, first_free - 1, s);
+    string* exist = binary_search(first_ele, first_free - 1, s);
     if (!exist) {
         check_realloc();
         alloc.construct(first_free++, s);
@@ -124,12 +124,10 @@ void YourSet::add(const string &s) {
 }
 
 bool YourSet::contains(const string &s) {
-    bool res = binary_search(first_ele, first_free-1, s);
-    return res;
+    string* res = binary_search(first_ele, first_free-1, s);
+    return res ? true: false;
 }
 
 bool YourSet::remove(const string &s) {
-    if (!contains(s)) return false;
-
-
+    return true;
 }

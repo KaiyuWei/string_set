@@ -19,7 +19,8 @@ int main(){
     for (auto beg = set.begin(); beg != set.end(); beg++) {
         cout << *beg << " ";
     }
-
+    cout << endl;
+    cout << set.contains("ppt");
 }
 
 
