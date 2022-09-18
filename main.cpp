@@ -14,12 +14,6 @@ using std::endl;
 using std::vector;
 
 int main(){
-<<<<<<< HEAD
-    YourSet set("tim", 5);
-    YourSet set2;
-    set2 = std::move(set);
-    cout << set2.capacity();
-=======
     YourSet set;
     set.add("t");
     set.add("ttttttt");
@@ -37,7 +31,6 @@ int main(){
         cout << *beg << " ";
     }
 
->>>>>>> heapsort
 }
 
 
