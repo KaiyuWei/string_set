@@ -152,6 +152,30 @@ YourSet.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled8.dir\build.make CMakeFiles/untitled8.dir/YourSet.cpp.s
 .PHONY : YourSet.cpp.s
 
+heap.obj: heap.cpp.obj
+.PHONY : heap.obj
+
+# target to build an object file
+heap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled8.dir\build.make CMakeFiles/untitled8.dir/heap.cpp.obj
+.PHONY : heap.cpp.obj
+
+heap.i: heap.cpp.i
+.PHONY : heap.i
+
+# target to preprocess a source file
+heap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled8.dir\build.make CMakeFiles/untitled8.dir/heap.cpp.i
+.PHONY : heap.cpp.i
+
+heap.s: heap.cpp.s
+.PHONY : heap.s
+
+# target to generate assembly for a file
+heap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled8.dir\build.make CMakeFiles/untitled8.dir/heap.cpp.s
+.PHONY : heap.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -188,6 +212,9 @@ help:
 	@echo ... YourSet.obj
 	@echo ... YourSet.i
 	@echo ... YourSet.s
+	@echo ... heap.obj
+	@echo ... heap.i
+	@echo ... heap.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
