@@ -18,7 +18,8 @@ public:
     YourSet(YourSet&);  // copy constructor
     YourSet(YourSet&&) noexcept; // moving constructor
     ~YourSet();  // destructor
-    YourSet &operator=(const YourSet&);
+    YourSet &operator=(const YourSet&);  // copy assignment
+    YourSet &operator=(YourSet&&) noexcept;  // moving assignment
     size_t size();
     size_t capacity();
     string *begin() {return first_ele;}
@@ -34,6 +35,5 @@ private:
     string *cap;  // points to the on pass the end of the allocated memory
 
 };
-
 
 #endif //UNTITLED8_YOURSET_H

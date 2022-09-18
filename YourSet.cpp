@@ -3,19 +3,25 @@
 //
 #include <memory>
 #include <utility>
+#include <iterator>
 #include "YourSet.h"
 
 using std::string;
 using std::allocator;
 using std::pair;
+using std::uninitialized_copy;
+using std::make_move_iterator;
 
 YourSet::YourSet():
     first_ele(nullptr), first_free(nullptr), cap(nullptr) {}
 
-YourSet::YourSet(const string &s, size_t n) {
+YourSet::YourSet(const string &s, size_t n):
+        first_ele(nullptr), first_free(nullptr), cap(nullptr)
+{
     while(n) {
         check_realloc();
         alloc.construct(first_free++, s);
+        n--;
     }
 }
 
@@ -30,6 +36,17 @@ YourSet& YourSet::operator=(const YourSet &rhs) {
     free();  // handling the self-assignment situation, copy rhs first then free
     first_ele = newdata.first;
     first_free = cap = newdata.second;
+    return *this;
+}
+
+YourSet& YourSet::operator=(YourSet &&rhs) noexcept {
+    if (this != &rhs) {
+        free();
+        first_ele = rhs.first_ele;
+        first_free = rhs.first_free;
+        cap = rhs.cap;
+        rhs.first_ele = rhs.first_free = rhs.cap = nullptr;
+    }
     return *this;
 }
 
@@ -56,11 +73,23 @@ void YourSet::check_realloc() {
         reallocate();
 }
 
+void YourSet::reallocate() {
+    size_t new_cap = size() ? 2 * size() : 1;
+    auto new_begin = alloc.allocate(new_cap);
+    auto new_end = uninitialized_copy(
+            make_move_iterator(first_ele),
+            make_move_iterator(first_free), new_begin);
+    free();
+    first_ele = new_begin;
+    first_free = new_end;
+    cap = first_ele + new_cap;
+}
+
 pair<string*, string*>
 YourSet::allocate_n_copy(string *b, string *e) {
     // allocate memory and copy from range marked by pointers b and e
-    auto begin = alloc.allocate(b - e);  // allocate memory
-    auto end = std::uninitialized_copy(b, e, begin);  // copy into the raw memory
+    auto begin = alloc.allocate(e - b);  // allocate memory
+    auto end = uninitialized_copy(b, e, begin);  // copy into the raw memory
     return {begin, end}; // returns pointer to the first element and one pass the last element
 }
 

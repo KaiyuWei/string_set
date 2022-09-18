@@ -2,13 +2,20 @@
 #include <sstream>
 #include <fstream>
 #include <memory>
+#include "YourSet.h"
+#include <string>
+#include <utility>
 
-using std::allocator;
+using std::string;
+using std::cout;
+using std::endl;
 
 int main(){
-    allocator<int> alloc;
-    auto p = alloc.allocate(10);
+    YourSet set("tim", 5);
+    YourSet set2;
+    set2 = std::move(set);
 
+    cout << set2.capacity();
 }
 
 
