@@ -129,5 +129,13 @@ bool YourSet::contains(const string &s) {
 }
 
 bool YourSet::remove(const string &s) {
+    string* target = binary_search(first_ele, first_free-1, s);
+    if (!target) return false;
+
+    for (auto cur = target; cur != first_free - 1; cur++) {
+        *cur = *(cur + 1);
+    }
+    alloc.destroy(--first_free);
     return true;
+
 }

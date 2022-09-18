@@ -20,7 +20,11 @@ int main(){
         cout << *beg << " ";
     }
     cout << endl;
-    cout << set.contains("ppt");
+    bool res = set.remove("helloworld");
+    cout << res << endl;
+    for (auto beg = set.begin(); beg != set.end(); beg++) {
+        cout << *beg << " ";
+    }
 }
 
 
