@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/kaiyu.wei/CLionProjects/untitled8/Functions.h">
-			<Option target="untitled8"/>
-		</Unit>
 		<Unit filename="C:/Users/kaiyu.wei/CLionProjects/untitled8/YourSet.cpp">
 			<Option target="untitled8"/>
 		</Unit>

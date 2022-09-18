@@ -1,12 +1,9 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include <memory>
 #include "YourSet.h"
 #include <string>
-#include <utility>
 #include <vector>
-#include "search.h"
 
 using std::string;
 using std::cout;
