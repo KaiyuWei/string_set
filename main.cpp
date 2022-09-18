@@ -14,14 +14,12 @@ using std::endl;
 using std::vector;
 
 int main(){
-    YourSet set({"ttt", "0", "a", "helloworld", "dudubaba", "zein56", "ppt"});
-
+    YourSet set({"ttt", "0", "a", "helloworld", "dudubaba", "zein56", "ppt", "ppt"});
+    set.add("dudubaba");
     for (auto beg = set.begin(); beg != set.end(); beg++) {
         cout << *beg << " ";
     }
-    cout << endl;
-    bool res = set.contains( "dudubaba");
-    cout << res;
+
 }
 
 

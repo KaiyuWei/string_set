@@ -19,14 +19,12 @@ using std::vector;
 YourSet::YourSet():
     first_ele(nullptr), first_free(nullptr), cap(nullptr) {}
 
-YourSet::YourSet(const string &s, size_t n):
+YourSet::YourSet(const string &s):
         first_ele(nullptr), first_free(nullptr), cap(nullptr)
 {
-    while(n) {
-        check_realloc();
-        alloc.construct(first_free++, s);
-        n--;
-    }
+    check_realloc();
+    alloc.construct(first_free++, s);
+
 }
 
 YourSet::YourSet(vector<string> vs):
@@ -117,9 +115,12 @@ void YourSet::free() {
 }
 
 void YourSet::add(const string &s) {
-    check_realloc();
-    alloc.construct(first_free++, s);
-    heap_sort(first_ele, first_free);
+    bool exist = binary_search(first_ele, first_free - 1, s);
+    if (!exist) {
+        check_realloc();
+        alloc.construct(first_free++, s);
+        heap_sort(first_ele, first_free);
+    }
 }
 
 bool YourSet::contains(const string &s) {

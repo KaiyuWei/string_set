@@ -16,7 +16,7 @@ using std::vector;
 class YourSet{
 public:
     YourSet();
-    YourSet(const string&, size_t n = 1);
+    YourSet(const string&);
     YourSet(vector<string>);
     YourSet(YourSet&);  // copy constructor
     YourSet(YourSet&&) noexcept; // moving constructor
