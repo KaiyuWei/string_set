@@ -2,10 +2,9 @@
 // Created by kaiyu.wei on 9/18/2022.
 //
 #include <string>
-#include <memory>
+#include "heap.h"
 
 using std::string;
-using std::make_shared;
 
 void max_heapify(string *begin, string *cur, string *end) {
     auto n = end - begin;  // size of the set
@@ -41,5 +40,16 @@ void build_heap(string *begin, string *end) {
     auto n = end - begin;
     for (auto cur = end - 1; cur >= begin; cur--) {
         max_heapify(begin, cur, end);
+    }
+}
+
+void heap_sort(string *begin, string *end) {
+    auto boundary = end;
+    for (auto cur = end - 1; cur != begin; cur-- ) {
+        string temp = *cur;
+        *cur = *begin;
+        *begin = temp;  // swap value
+        boundary--;
+        max_heapify(begin, begin, boundary);
     }
 }
